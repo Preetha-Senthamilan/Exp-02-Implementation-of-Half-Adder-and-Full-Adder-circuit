@@ -36,19 +36,55 @@ Switch ON the main switch
 If the output is 1, then the led glows.
 ### 
 Program:
-/*
+```
 Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
-Logic symbol & Truthtable
-RTL realization
+Developed by: PREETHA.S
+RegisterNumber: 212222230110
 
-### Output:
-### RTL
-### TIMING DIAGRAM
+1. Program to design a half adder:
+
+module ex3(a,b,sum,carry);
+input a,b;
+output sum,carry;
+assign sum=a^b;
+assign carry=a&b;
+endmodule 
+
+2. Program to design a full adder:
+
+module ex31(a,b,cin,sum,carry);
+input a,b,cin;
+output sum,carry;
+assign sum=a^b^cin;
+assign carry=(a&b)|((a^b)&cin);
+endmodule
+```
+
+### TRUTH TABLE
+### HALF ADDER
+![Screenshot 2023-09-13 233423](https://github.com/Preetha-Senthamilan/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/119390282/45b15cd6-ab7d-44d9-aa7d-2c2ab14bce6a)
+
+### FULL ADDER
+![Screenshot 2023-09-13 233431](https://github.com/Preetha-Senthamilan/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/119390282/eb06802f-0402-4a8f-bba7-4a679d498f23)
 
 
-### TRUTH TABLE 
+### WAVEFORM
+### HALF ADDER
+![Screenshot 2023-09-13 233556](https://github.com/Preetha-Senthamilan/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/119390282/9bc88d99-e314-4edf-bbf0-109d84c15a5d)
+
+### FULL ADDER
+![Screenshot 2023-09-13 233606](https://github.com/Preetha-Senthamilan/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/119390282/a702a27a-5e15-49b3-b7c0-ca23a85402b6)
+
+### RTL DIAGRAM
+### HALF ADDER
+![Screenshot 2023-09-13 233239](https://github.com/Preetha-Senthamilan/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/119390282/151094e1-2cc5-440c-83e5-b9be3c3f6abf)
+
+### FULL ADDER
+![Screenshot 2023-09-13 233247](https://github.com/Preetha-Senthamilan/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/119390282/b108f1d3-dd55-4584-acfe-4f67b30b9669)
+
+
+
 
 ### Result:
+Thus the given logic functions are implemented using and their operations are verified using Verilog programming.
+
